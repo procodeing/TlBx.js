@@ -1,4 +1,5 @@
 (function(){
+  //TODO do error handiling for all functions
   //polyfill
   if(console.debug === undefined){console.debug=console.log;}
   
@@ -14,7 +15,7 @@
   
   //tools
   init.tools = Object.create(null,{});
-  init.tools.shift = function(a){
+  init.tools.trans = function(a){
     
     if((arguments[1] === undefined || (arguments[1]!=="forward"&&arguments[1]!=="back"))||!(Array.isArray(arguments[0]))){
      console.warn("missing or bad value,returning false");
@@ -30,7 +31,7 @@
     
     
   };
-  
+
   
 tlBx=init;
 if(tlBx !== init){console.warn('tlBx.js incounterd a fatal error');}
